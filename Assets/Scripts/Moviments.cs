@@ -9,13 +9,13 @@ public class Moviments : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
-    {
-        float horizontal = Input.GetAxis("Horizontal");
+    { 
+        float horizontal = Input.GetAxis("Horizontal"); 
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 position = this.transform.position;
@@ -24,5 +24,8 @@ public class Moviments : MonoBehaviour
         position.y += vertical * this.speed * Time.deltaTime;
 
         this.transform.position = position;
+
+        Debug.Log(horizontal);
+        Debug.Log(vertical);
     }
 }
